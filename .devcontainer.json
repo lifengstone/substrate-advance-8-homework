@@ -30,7 +30,13 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y protobuf-compiler clang && sudo chown -R $(whoami) /usr/local/rustup/downloads &&  && git clone https://github.com/papermoonio/polkadot-sdk-solo-template-dev-courses.git substrate"
+    "postCreateCommand": [
+        // "rustc --version",
+        "sudo apt-get update",
+        "sudo apt-get install -y protobuf-compiler clang",
+        "sudo chown -R $(whoami) /usr/local/rustup/downloads",
+        "git clone https://github.com/papermoonio/polkadot-sdk-solo-template-dev-courses.git substrate"
+    ]
 
 	// Configure tool-specific properties.
 	// "customizations": {},
